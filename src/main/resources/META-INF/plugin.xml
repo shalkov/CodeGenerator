@@ -1,0 +1,16 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <id>ru.shalkoff.android.CodeGenerator</id>
+    <name>CodeGenerator</name>
+    <vendor email="admin@shalkoff.ru" url="https://shalkoff.ru">Shalkov</vendor>
+    <depends>com.intellij.modules.platform</depends>
+    <depends>org.jetbrains.android</depends>
+    <depends>com.intellij.modules.androidstudio</depends>
+    <extensions defaultExtensionNs="com.intellij">
+    </extensions>
+
+    <extensions defaultExtensionNs="com.android">
+        <moduleDescriptionProvider
+                implementation="ru.shalkoff.android.codegenerator.module.AndroidModuleDescriptionProvider"/>
+    </extensions>
+</idea-plugin>
